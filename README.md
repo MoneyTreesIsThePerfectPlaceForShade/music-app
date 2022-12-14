@@ -1,48 +1,48 @@
-# Music App Doc
+# music
 
-В этом документе я описываю _весь_ процесс разработки музыкального приложения.
+This template should help get you started developing with Vue 3 in Vite.
 
-# Шаг 1
+## Recommended IDE Setup
 
-## Инициализация и начальная настройка
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-С помощью команды _npm init vue@latest_ начинаю конфигурацию и создание приложения на Vue. Я выбрал следующие настройки: Vue Router, Pinia, Vitest, Cypress, ESLint, Prettier.
-Далее перешел в директорию проекта и установил зависимости _npm install_.
+## Customize configuration
 
-Зайдя в настройки VS Code, открываем их как JSON файл. Для того, чтобы ESLint работал при сохранении проекта, нужно прописать следующее:
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-```js
-"editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
+## Project Setup
+
+```sh
+npm install
 ```
 
-Далее установил tailwind, используя команду `npm install -D tailwindcss postcss autoprefixer`. После ввёл команду `npx tailwindcss init -p`. Эта команда сгенерировала файлы конфигурации для tailwind и postcss. Открыв файл конфигурации tailwind, я ввёл в контент то, что рекомендовалось на сайте: `"./index.html", "./src/**/*.{js,ts,jsx,tsx}",`.
+### Compile and Hot-Reload for Development
 
-Чтобы ESLint не ругался на module.exports, нужно в файле конфигурации ESLint добавить объект env с такими свойствами:
-
-```js
-env: {
-    node: true,
-  },
+```sh
+npm run dev
 ```
 
-В src/assets/base.css удаляем весь код и пишем это:
+### Compile and Minify for Production
 
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+```sh
+npm run build
 ```
 
-Чтобы VS Code не ругался на `@tailwind` заходим в JSON версию настроек и прописываем это:
+### Run Unit Tests with [Vitest](https://vitest.dev/)
 
-```js
-"files.associations": {
-        "*.css": "tailwindcss"
-    }
+```sh
+npm run test:unit
 ```
 
-Удалил из `src/assets/` файл `main.css`. Это потребовалось только потому, что на курсе был заготовлен отдельный `main.css`.
-В `main.js` изменяем импорт css с `main.css` на `base.css`.
-В `main.js` добавляем импорт css с `main.css`.
+### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+
+```sh
+npm run build
+npm run test:e2e # or `npm run test:e2e:ci` for headless testing
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
