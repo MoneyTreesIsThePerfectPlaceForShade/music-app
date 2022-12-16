@@ -1,48 +1,13 @@
-# music
+# Music App Doc
 
-This template should help get you started developing with Vue 3 in Vite.
+В данном проекте были использованы:
 
-## Recommended IDE Setup
+0. Vue и Vite;
+1. Pinia - для стейт менеджмента;
+   Заметка: создает хранилища данных, которые должны быть глобальными, например, данные о пользователе, которые должны быть доступны на любой странице.
+2. Vee Validate - для валидации форм;
+   Заметка: заполнение форм (например, регистрационных) должно проверяться для того, чтобы на сервер не были посланы неверные данные, например, в поле возраст должны быть числа.
+3. ESLint + Prettier - для проверки и форматирования кода
+4. Tailwind - для стилей
+   Замтека: лично я бы использовал ванильный CSS, максимум SCSS, но курс сделан по Vue, поэтому изучаю именно его, не отвлекаясь на посторонние технологии.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run build
-npm run test:e2e # or `npm run test:e2e:ci` for headless testing
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
